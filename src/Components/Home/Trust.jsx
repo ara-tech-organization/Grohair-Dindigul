@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import CountUp from "react-countup";
-import TrustImage from "../Images/3.jpeg";
+import TrustImage from "../Images/3.jpg"
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -23,20 +23,17 @@ const WhyTrustSection = () => {
   return (
     <Box
       sx={{
-        width: { xs: "91%", sm: "95%",md:'100%' },
+        width: '100%' ,
         backgroundColor: "#f4f3f2ff",
-        px: { xs: 2, sm: 2, md: 6, lg: 7 },
         py: { xs: 4, sm: 8, md: -5 ,lg:10},
-        mt:{md:-10,lg:5}
+        mt:{md:10,lg:5}
       }}
     >
-      <Grid container spacing={6} alignItems="center" ml={{ sm: 15, lg: 6 ,md:35}}>
+      <Grid container spacing={6} alignItems="center" >
         {/* ✅ Left Text Content */}
         <Grid
-          item
-          xs={12}
-          md={6}
-          order={{ xs: 1, sm: 1, md: 1, lg: 1 }}
+          size={{xs:12,lg:6}}
+          
           display="flex"
           justifyContent="center"
           data-aos="fade-up"
@@ -44,13 +41,13 @@ const WhyTrustSection = () => {
           <Box
             sx={{
               maxWidth: 500,
-              textAlign: { xs: "center", md: "left" },
+              textAlign: "center",
             }}
           >
             <Typography
               fontWeight="bold"
               sx={{
-                fontSize: { xs: "24px", sm: "30px", md: "35px" },
+                fontSize: { xs: "22px", sm: "30px", md: "30px" },
                 mb: 2,
               }}
             >
@@ -89,8 +86,8 @@ const WhyTrustSection = () => {
                     backgroundColor: "#fff",
                     borderRadius: 2,
                     p: 2,
-                    width: { xs: "90%", sm: "160px", md: "150px" },
-                    height: { xs: "auto", sm: "160px", md: "100px" },
+                    width:"100px" ,
+                    height: "100px" ,
                     boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                     textAlign: "center",
                     display: "flex",
@@ -127,21 +124,16 @@ const WhyTrustSection = () => {
 
         {/* ✅ Right Image */}
         <Grid
-          item
-          xs={12}
-          md={6}
-          ml={{ lg: 30 }}
-          order={{ xs: 2, sm: 2, md: 2, lg: 2 }}
+         size={{lg:6,xs:12}}
+
+          
           display="flex"
           justifyContent={{ xs: "center", lg: "flex-end" }}
           data-aos="fade-up"
         >
           <Box
             sx={{
-              width: { xs: "80%", sm: "70%", md: "90%", lg: "100%" },
-              maxWidth: 550,
-              height: isMdDown ? "auto" : "500px",
-              overflow: "hidden",
+             
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -152,10 +144,11 @@ const WhyTrustSection = () => {
               src={TrustImage}
               alt="Trust Section"
               sx={{
-                width: "100%",
-                height: "100%",
+                width: "80%",
+                height: "80%",
                 objectFit: "cover",
                 borderRadius: { xs: "20px", lg: "0 100px 0 100px" },
+                mr:{lg:15},
               }}
             />
           </Box>

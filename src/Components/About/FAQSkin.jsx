@@ -12,36 +12,36 @@ import 'aos/dist/aos.css';
 
 const faqs = [
   {
-    question: 'What does a GloSkin facial session cover?',
-    answer: 'Our facials include deep cleansing, exfoliation, hydration, and rejuvenating treatments designed to boost skin glow and clarity',
+    question: 'What does a GloSkin facial session cover?',
+    answer: 'Our facials include deep cleansing, exfoliation, hydration, and rejuvenating treatments designed to boost skin glow and clarity',
   },
   {
-    question: 'Do your treatments work on sensitive skin?',
-    answer: 'Yes! We tailor every service to your skin type—whether its sensitive, oily, dry, or acne-prone—for safe and effective results.',
+    question: 'Do your treatments work on sensitive skin?',
+    answer: 'Yes! We tailor every service to your skin type—whether its sensitive, oily, dry, or acne-prone—for safe and effective results.',
   },
   {
-    question: 'Can you treat acne, pigmentation, or uneven tone?',
-    answer: 'Definitely. Our solutions include chemical peels, HydraFacials, and laser therapy to target acne, dark spots, and dull skin',
+    question: 'Can you treat acne, pigmentation, or uneven tone?',
+    answer: 'Definitely. Our solutions include chemical peels, HydraFacials, and laser therapy to target acne, dark spots, and dull skin',
   },
   {
     question: 'Is laser hair removal available in Dindigul?',
-    answer: 'Yes! Our FDA-approved laser tech is safe for all skin types and delivers long-term hair reduction results.',
+    answer: 'Yes! Our FDA-approved laser tech is safe for all skin types and delivers long-term hair reduction results.',
   },
   {
-    question: 'How many sessions do I need for laser hair removal?',
-    answer: 'On average, 6 to 8 sessions are needed based on your skin tone, hair texture, and treatment area.',
+    question: 'How many sessions do I need for laser hair removal?',
+    answer: 'On average, 6 to 8 sessions are needed based on your skin tone, hair texture, and treatment area.',
   },
   {
-    question: 'What anti-aging options do you offer?',
-    answer: 'We offer collagen induction, RF facials, wrinkle relaxers, and more to firm, lift, and revitalize mature skin.',
+    question: 'What anti-aging options do you offer?',
+    answer: 'We offer collagen induction, RF facials, wrinkle relaxers, and more to firm, lift, and revitalize mature skin.',
   },
   {
-    question: 'How frequently should I get a facial at GloSkin?',
-    answer: 'For radiant, clear skin, we recommend a facial every 3–4 weeks to manage concerns like breakouts, dryness, or dullness.',
+    question: 'How frequently should I get a facial at GloSkin?',
+    answer: 'For radiant, clear skin, we recommend a facial every 3–4 weeks to manage concerns like breakouts, dryness, or dullness.',
   },
   {
     question: 'How do I get started at GloSkin Dindigul?',
-    answer: 'Simply drop by our Dindigul center or reach out online to book a custom skin consultation. Let’s glow!',
+    answer: 'Simply drop by our Dindigul center or reach out online to book a custom skin consultation. Let’s glow!',
   },
 ];
 

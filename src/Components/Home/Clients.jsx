@@ -13,28 +13,29 @@ import 'aos/dist/aos.css';
 
 const testimonials = [
   {
-    name: 'Sneha Raj',
-    text: "Never thought I'd love my skin this much. Every session was pure magic. The glow is real!",
+    name: ' -Babulal ',
+    text: "Very good satisfied I have completed Regen pro9 &MNRF full completed my session thank you adgro, well explained Doctors, wonderful caring staff thanks.",
     rating: 5,
   },
   {
-    name: 'Bhavik Kumar',
-    text: "Professional, clean, and deeply caring.Dindigul needed a place like this. Blessings!",
+    name: '-Keerthana',
+    text: "The doc is so friendly and explains everything in detail and provides proper treatment for the issues . The hydra facial was good , skin felt clean . The person who did the procedure was also very friendly and kind.",
     rating: 5,
   },
   {
-    name: 'Meera Laxmi',
-    text: "Doctor explained every detail with patience. My acne is gone and confidence is back.",
+    name: '-Kiruthikadevi',
+    text: "The clinic is clean, modern, and very welcoming from the moment you walk in.Dr. Allan was incredibly knowledgeable and took the time to explain every step of the treatment.I left feeling confident and cared for—definitely coming back!",
+    rating: 5,
+  },
+
+ {
+    name: '-Siddarth Giri',
+    text: "I've struggled with acne for years, and this clinic has been a game-changer.Dr. Allan’s personalized approach and genuine care made all the difference.The results speak for themselves—my skin has never looked better!",
     rating: 5,
   },
   {
-    name: 'Harish V',
-    text: "From bald spots to full locks—what a transformation! Truly life-changing care.",
-    rating: 5,
-  },
-  {
-    name: 'Lavanya Devi',
-    text: "Super hygienic, welcoming staff, and great follow-up. I'm beyond satisfied.",
+    name: '-Sharanji.N',
+    text: "I am sharanji N, I have completed My oxygen laser therapy session and also clearee my danruf issue. Dr Allan Santhosh well explained about the treatment. The staff Nurse Gayathri madam was very kind and helpful to me.",
     rating: 5,
   },
 ];
@@ -56,7 +57,7 @@ const TestimonialsCarousel = () => {
       sx={{
         py: 10,
         backgroundColor: '#fff',
-        ml: { sm: -10, xs: -1,md:-15 ,lg:2},
+        ml: { sm: -10, xs: 1,md:-15 ,lg:-3},
       }}
     >
       <Typography
@@ -64,94 +65,101 @@ const TestimonialsCarousel = () => {
         align="center"
         fontWeight={700}
         color="#fa1212ff"
-        ml={{ sm: 8 }}
+        ml={{ sm: 9 }}
         mb={5}
         data-aos="fade-up"
       >
         What Our Clients Say
       </Typography>
 
-      <Box position="relative" sx={{ px: 2 }}>
-        <Box data-aos="fade-up"
-          ref={scrollRef}
+    <Box position="relative" sx={{ px: 2 }}>
+  <Box
+    data-aos="fade-up"
+    ref={scrollRef}
+    sx={{
+      display: isMdUp ? 'flex' : 'grid',
+      overflowX: isMdUp ? 'auto' : 'visible',
+      scrollBehavior: 'smooth',
+      '&::-webkit-scrollbar': { display: 'none' },
+      gap: 2,
+      // ✅ Remove unwanted left margin on xs/sm
+      ml: { xs: 0, sm: 10, md: 15, lg: 4 },
+      p: 1,
+      gridTemplateColumns: isMdUp ? 'none' : '1fr',
+      justifyContent: isMdUp ? 'flex-start' : 'center', // ✅ center on xs/sm
+      alignItems: 'stretch',
+      gridAutoRows: '1fr',
+    }}
+  >
+    {testimonials.map((item, index) => (
+      <Paper
+        key={index}
+        data-aos="fade-up"
+        onClick={() =>
+          setClickedIndex(index === clickedIndex ? null : index)
+        }
+        sx={{
+          flex: 1,
+          borderRadius: '20px',
+          p: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          position: 'relative',
+          // ✅ Consistent width
+          width: {
+            xs: '90%',
+            sm: '70%',
+            md: '320px',
+            lg: '30%',
+          },
+         
+          mx: 'auto', // ✅ center each card in grid/flex
+        }}
+      >
+        {/* Quote Icon */}
+        <Box
+          component="img"
+          src={quote}
+          alt="quote"
           sx={{
-            display: isMdUp ? 'flex' : 'grid',
-            overflowX: isMdUp ? 'auto' : 'visible',
-            scrollBehavior: 'smooth',
-            '&::-webkit-scrollbar': { display: 'none' },
-            gap: 2,
-            ml: { sm: 15,lg:4 ,md:20},
-            p: 1,
-            gridTemplateColumns: isXs
-              ? '1fr'
-              : isSm
-              ? 'repeat(1, 1fr)'
-              : 'none',
-            justifyContent: isMdUp ? 'flex-start' : 'center',
+            width: 70,
+            height: 90,
+            position: 'absolute',
+            left: 20,
+            opacity: 2
           }}
-        >
-          {testimonials.map((item, index) => (
-            <Paper
-              key={index}
-              data-aos="fade-up"
-              onClick={() =>
-                setClickedIndex(index === clickedIndex ? null : index)
-              }
-              sx={{
-                width: '80%',
-                ml: { xs: 2, lg: 0 },
-                height: isMdUp ? 390 : 'auto',
-                borderRadius: '20px',
-                p: 3,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                position: 'relative',
-                
-              }}
-            >
-              {/* Quote Icon */}
-              <Box
-                component="img"
-                src={quote}
-                alt="quote"
-                sx={{
-                  width: 70,
-                  height: 90,
-                  position: 'absolute',
-                  top: 20,
-                  left: 20,
-                  opacity: 2
-                }}
-              />
+        />
 
-              {/* Content */}
-              <Box mt={12}>
-                <Typography
-                  sx={{ fontSize: { lg: '1.5rem', xs: '1.2rem' } }}
-                  fontWeight={700}
-                  gutterBottom
-                >
-                  {item.name}
-                </Typography>
-                <Typography
-                  fontSize={{ lg: 20, xs: '1rem' }}
-                  color="text.secondary"
-                >
-                  {item.text}
-                </Typography>
-              </Box>
+        {/* Content */}
+        <Box mt={12}>
+          <Typography
+            sx={{ fontSize: { lg: '1.4rem', xs: '1.2rem' } }}
+            fontWeight={700}
+            gutterBottom
+          >
+            {item.name}
+          </Typography>
+          <Typography
+            fontSize={{ lg: '1rem', xs: '1rem',md:'0.50rem' }}
+            color="text.secondary"
+          >
+            {item.text}
+          </Typography>
+        </Box>
 
-              {/* Stars */}
-              <Box mt={2}>
-                {Array.from({ length: item.rating }, (_, i) => (
-                  <StarIcon key={i} sx={{ color: '#FFC107', fontSize: 20 }} />
-                ))}
-              </Box>
-            </Paper>
+        {/* Stars */}
+        <Box mt={2}>
+          {Array.from({ length: item.rating }, (_, i) => (
+            <StarIcon key={i} sx={{ color: '#FFC107', fontSize: 20 }} />
           ))}
         </Box>
-      </Box>
+      </Paper>
+    ))}
+  </Box>
+</Box>
+
+
     </Box>
   );
 };

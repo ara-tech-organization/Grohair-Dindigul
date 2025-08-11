@@ -39,42 +39,33 @@ const HighlightSection = () => {
   return (
     <Box
       sx={{
-        width: { xs: "90%", lg: "100%", sm: "98%",md:'100%' },
-        minHeight: { lg: "70vh", md: "90vh", xs: "90vh", sm: "100vh" },
-        px: { xs: 2, sm: 1, md: 6, lg: 10 },
-        py: { xs: 4 },
-        ml: { sm: 1, lg: 1 },
+        width: '100%',
         backgroundColor: "#f9f6f4",
+        py:4
       }}
     >
       <Grid
         container
         spacing={4}
         alignItems="center"
-        ml={{lg:3,md:2}}
-        
         direction={{ xs: "column", md: "row" }}
       >
         {/* Left Circle (Responsive Position) */}
         <Grid
-          item
-          xs={12}
-          md={6}
+          size={{xs:12, lg:6}}
           data-aos="zoom-in"
           sx={{
             display: "flex",
-            justifyContent: { xs: "center", md: "flex-start" },
+            justifyContent: "center",
             alignItems: "center",
-            order: { xs: 2, md: 1 },
+            height:"400px",
+            mt:{lg:5}
+          
           }}
         >
           <Box
-            sx={{
-              position: "relative",
-              width: isMdDown ? 220 : 250,
-              height: isMdDown ? 220 : 250,
-              mt: isMdDown ? 5 : "70%",
-              mx: isMdDown ? "auto" : 0,
+            sx={{ pt:{md:10,lg:0}
+              
             }}
           >
             {iconData.map((item, i) => {
@@ -90,8 +81,6 @@ const HighlightSection = () => {
                   onMouseEnter={() => setActiveIndex(i)}
                   sx={{
                     position: "absolute",
-                    top: { lg: "25%", xs: "50%", md: "155%",lg:'50%' },
-                    left: { lg: "90%", xs: "50%", sm: "50%", md: "200%" },
                     transform: `translate(${x}px, ${y}px) translate(-50%, -50%) scale(${
                       isActive ? 1.2 : 1
                     })`,
@@ -130,30 +119,31 @@ const HighlightSection = () => {
 
         {/* Right Content */}
         <Grid
-          item
-          xs={12}
-          md={6}
+          size={{xs:12, lg:6}}
           data-aos="fade-up"
           sx={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "flex-start",
-            alignItems: { xs: "center", md: "flex-start" },
+            justifyContent:{ lg:"flex-start",md:'center'},
+            alignItems:"center",
             height: "100%",
-            textAlign: { xs: "center", md: "left" },
-            px: { xs: 1, md: 1, lg: 10 },
-            mt: { xs: 0, sm: 4, md: -13,lg:10 },
-            order: { xs: 1, md: 2 },
-            ml: { lg: 50, xs: 1 },
+            textAlign: { xs: "center", md: "center",lg:'left' },
+            py:12,
+            pt:{xs:1,md:10,lg:17},
+              ml:{lg:-6},
+             
+           
           }}
         >
           <Typography
             sx={{
               fontWeight: "bold",
-              fontSize: { xs: "1.4rem", sm: "1.5rem", md: "2rem" },
+              fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem" },
               color: "#E2231A",
               mb: 2,
-              width: { lg: "500px", md: "500px", sm: "450px" },
+              width: { lg: "500px", md: "70%", sm: "600px" ,xs:'350px'},
+              mt:{xs:-7,md:-1},
+            
             }}
           >
             Leading Hair & Skin Treatments at GroHair & GloSkin – Dindigul
@@ -162,10 +152,11 @@ const HighlightSection = () => {
           <Typography
             sx={{
               color: "#555",
-              fontSize: { xs: "0.9rem", sm: "1.3rem", md: "1.05rem" },
+              fontSize: { xs: "1rem", sm: "1.3rem", md: "1.2rem" },
               mb: 2,
-              maxWidth: "500px",
-              mx: { xs: "auto", md: 0 },
+              maxWidth: {lg:"500px",xs:'290px',md:'70%',sm:'90%'},
+              mx: { xs: "auto", md: 'auto' },
+              
             }}
           >
             At GroHair & GloSkin Dindigul, we use proven hair restoration
@@ -177,8 +168,8 @@ const HighlightSection = () => {
           <Typography
             sx={{
               color: "#555",
-              fontSize: { xs: "0.9rem", sm: "1.3rem", md: "1.05rem" },
-              maxWidth: "500px",
+              fontSize: { xs: "1rem", sm: "1.3rem", md: "1.2rem" },
+               maxWidth: {lg:"500px",xs:'290px',md:'70%',sm:'90%'},
               mx: { xs: "auto", md: 0 },
             }}
           >

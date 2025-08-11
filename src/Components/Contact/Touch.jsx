@@ -51,9 +51,10 @@ const Touch = () => {
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer  123` ,
-          },
+  "Content-Type": "application/json",
+  Authorization: "Bearer 123"
+},
+
           body: JSON.stringify(payload),
         }
       );
@@ -126,13 +127,13 @@ const Touch = () => {
         py: 6,
         bgcolor: "#fff",
         mt: 10,
-        ml: { md: 15, lg: 0 },
+        ml: { md: 17, lg: 0 },
       }}
     >
       <Grid container spacing={4} data-aos="fade-up">
-        <Grid item xs={12} md={4} width={{ lg: "50%", xs: "100%" }}>
+        <Grid size={{ xs: 12, lg: 4 }} width={{ lg: "50%", xs: "100%" ,md:'80%'}}>
           <Paper elevation={3} sx={{ p: 4 }}>
-            <Typography variant="h4" fontWeight="bold" ml={2}>
+            <Typography variant="h4" fontWeight="bold" align="center">
               Get in{" "}
               <Box component="span" color="#ff0000ff">
                 Touch
@@ -180,37 +181,35 @@ const Touch = () => {
                   value={formData.mobile}
                   onChange={handleChange("mobile")}
                 />
-             <LocalizationProvider dateAdapter={AdapterDayjs}>
-  <DatePicker
-    value={selectedDate}
-    onChange={(newDate) => setSelectedDate(newDate)}
-    slotProps={{
-      textField: {
-        fullWidth: true,
-        sx: {
-          ...fieldStyle,
-          "& .MuiOutlinedInput-root": {
-            "& fieldset": {
-              borderColor: "#000000 !important",
-            },
-            "&:hover fieldset": {
-              borderColor: "#000000 !important",
-            },
-            "&.Mui-focused fieldset": {
-              borderColor: "#000000 !important",
-            },
-          },
-          "& .MuiInputAdornment-root svg": {
-            color: "#000000 !important",
-          },
-        },
-        InputLabelProps: labelProps,
-      },
-    }}
-  />
-</LocalizationProvider>
-
-
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    value={selectedDate}
+                    onChange={(newDate) => setSelectedDate(newDate)}
+                    slotProps={{
+                      textField: {
+                        fullWidth: true,
+                        sx: {
+                          ...fieldStyle,
+                          "& .MuiOutlinedInput-root": {
+                            "& fieldset": {
+                              borderColor: "#000000 !important",
+                            },
+                            "&:hover fieldset": {
+                              borderColor: "#000000 !important",
+                            },
+                            "&.Mui-focused fieldset": {
+                              borderColor: "#000000 !important",
+                            },
+                          },
+                          "& .MuiInputAdornment-root svg": {
+                            color: "#000000 !important",
+                          },
+                        },
+                        InputLabelProps: labelProps,
+                      },
+                    }}
+                  />
+                </LocalizationProvider>
 
                 <TextField
                   select
@@ -271,8 +270,13 @@ const Touch = () => {
             </Box>
 
             <Grid container spacing={2} mt={4} alignItems="center">
-              <Grid item xs={12} sm={4} ml={6}>
-                <Box display="flex" alignItems="center" gap={1}>
+              <Grid size={{ xs: 12, sm: 4 }}  >
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  gap={1}
+                  ml={{ xs: -1.5 ,md:1,sm:3,xs:2}}
+                >
                   <PhoneIcon fontSize="small" />
                   <Box>
                     <Typography variant="body2">PHONE</Typography>
@@ -282,8 +286,13 @@ const Touch = () => {
                   </Box>
                 </Box>
               </Grid>
-              <Grid item xs={12} sm={4}>
-                <Box display="flex" alignItems="center" gap={2} ml={2}>
+              <Grid size={{ xs: 12, sm: 4 }}>
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  gap={{md:5,lg:3,xs:3,sm:6}}
+                  ml={{ xs: 2.5, md:3,lg:1 }}
+                >
                   <Link
                     href="https://www.instagram.com/yourusername"
                     target="_blank"
@@ -302,8 +311,13 @@ const Touch = () => {
                   </Link>
                 </Box>
               </Grid>
-              <Grid item xs={12} sm={4}>
-                <Box display="flex" alignItems="center" gap={1} ml={{ lg: 1, xs: 2 }}>
+              <Grid size={{ xs: 12, sm: 4 }}>
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  gap={1}
+                  ml={{ lg: -6, xs: 3 ,md:-2,sm:-2}}
+                >
                   <EmailIcon fontSize="small" />
                   <Box>
                     <Typography variant="body2">EMAIL</Typography>
@@ -317,20 +331,26 @@ const Touch = () => {
           </Paper>
         </Grid>
 
-        <Grid item xs={12} md={8}>
+        <Grid size={{ xs: 12, md: 6 ,lg:5}}>
           <Box
             sx={{
-              width: { lg: "200%", xs: "100%", sm: "210%", md: "270%" },
+              width: { lg: "120%", xs: "90%", sm: "90%", md: "150%" },
               height: "90%",
               minHeight: 400,
               borderRadius: 2,
               overflow: "hidden",
               mt: 5,
-              ml: { xs: 2, md: -1 },
+              ml: { xs: 2, md: 3,sm:5 },
             }}
           >
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.6053768974207!2d77.98699437404639!3d10.373403989751942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00ab258e111d63%3A0x4fce19ca52a1fd24!2sAdvanced%20GroHair%20%26%20GloSkin%20-%20Dindigul!5e0!3m2!1sen!2sin!4v1754127211267!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%"
-              height="100%"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.6053768974207!2d77.98699437404639!3d10.373403989751942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00ab258e111d63%3A0x4fce19ca52a1fd24!2sAdvanced%20GroHair%20%26%20GloSkin%20-%20Dindigul!5e0!3m2!1sen!2sin!4v1754127211267!5m2!1sen!2sin" 
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              width="100%"
+              height="100%"
+            ></iframe>
           </Box>
         </Grid>
       </Grid>

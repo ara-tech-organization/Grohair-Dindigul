@@ -16,10 +16,10 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../Components/Images/Logo1.png";
+import Logo from "../Components/Images/Logo.jpeg";
 
 const navItems = [
-  { label: "Home", to: "/home" },
+  { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Contact", to: "/contact" },
@@ -44,8 +44,9 @@ const Header = () => {
         elevation={0}
         sx={{
           backgroundColor: "#fff",
-          px: { xs: 1, md: 5 },
+          px: { xs: 1, md: 2 },
           py: { xs: 1.5, md: 1 },
+          
           minHeight: "40px",
           justifyContent: "center",
           overflowX: "hidden",
@@ -66,7 +67,7 @@ const Header = () => {
             alt="GroHair Logo"
             sx={{
               height: { xs: 70, sm: 70, md: 70, lg: 60 },
-              width: { xs: 120, sm: 190, md: 200, lg: 150 },
+              width: { xs: 150, sm: 190, md: 200, lg: 150 },
             }}
           />
 

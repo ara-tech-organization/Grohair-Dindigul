@@ -20,8 +20,8 @@ function Home() {
       <Herosection />
       <Section />
       <HighlightSection />
-      <Skinsection />
       <HairSection />
+      <Skinsection />
       <Trust />
       <Clients />
       <Footer/>

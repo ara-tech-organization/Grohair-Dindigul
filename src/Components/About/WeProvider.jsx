@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
-import AboutImg from "../Images/2.jpeg"; // make sure it's a girl image
+import AboutImg from "../Images/1.jpg"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -28,7 +28,7 @@ const Section = () => {
         backgroundColor: "#fff",
         position: "relative",
         mb: { md: 10 },
-        ml: { sm: 7, lg: 1 },
+        ml: { sm: 7, lg: 1 ,md:2},
         mt: 10,
       }}
     >
@@ -39,6 +39,7 @@ const Section = () => {
           flex: 1,
           textAlign: { xs: "center", md: "left" },
           ml: { sm: -5, lg: 2 },
+         
         }}
       >
         <Typography
@@ -47,6 +48,7 @@ const Section = () => {
             fontWeight: "bold",
             mb: 1,
             fontSize: { xs: "1rem", sm: "1.5rem", md: "1.2rem" },
+          
           }}
         >
           We Provide
@@ -61,6 +63,7 @@ const Section = () => {
               sm: "1.8rem",
               md: "2.5rem",
               lg: "2.8rem",
+              xl:'2rem'
             },
             mb: 3,
             lineHeight: 1.4,
@@ -88,7 +91,7 @@ const Section = () => {
                 p: 2,
                 borderRadius: 2,
                 maxWidth: {lg:500,md:600,sm:550},
-                height: {lg:200,md:350,xs:200,sm:100},
+                height: {lg:230,md:350,xs:200,sm:100},
                 flex: 1,
               }}
             >
@@ -96,7 +99,8 @@ const Section = () => {
                 sx={{
                   color: "#555",
                   fontSize: { xs: "0.90rem", sm: "1.3rem", md: "1.05rem" },
-                  mt: 2,
+                  mt: 1,
+                 
                 }}
               >
                 GroHair and GloSkin combine their deep expertise in hair and skin
@@ -114,7 +118,7 @@ const Section = () => {
                 p: 2,
                 borderRadius: 2,
                 maxWidth: 550,
-                 height: {lg:200,md:350,xs:200,sm:100},
+                 height: {lg:230,md:350,xs:200,sm:100},
                 flex: 1,
               }}
             >

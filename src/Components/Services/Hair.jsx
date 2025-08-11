@@ -63,22 +63,21 @@ const HairSection = () => {
     const translateXMap = [-220, -120, 0, 120, 200];
 
     if (relPos >= -2 && relPos <= 2) {
-  const mapIndex = relPos + 2;
-  return {
-    transform: isMdDown
-      ? `translateX(-50%) scale(${scaleMap[mapIndex]})`
-      : `translateX(${translateXMap[mapIndex]}px) scale(${scaleMap[mapIndex]})`,
-    opacity: opacityMap[mapIndex],
-    zIndex: zIndexMap[mapIndex],
-    transition: "all 0.5s ease",
-    position: "absolute",
-    left: "50%",
-    top: 0,
-    transformOrigin: "center",
-    transformStyle: "preserve-3d",
-  };
-}
-
+      const mapIndex = relPos + 2;
+      return {
+        transform: isMdDown
+          ? `translateX(-50%) scale(${scaleMap[mapIndex]})`
+          : `translateX(${translateXMap[mapIndex]}px) scale(${scaleMap[mapIndex]})`,
+        opacity: opacityMap[mapIndex],
+        zIndex: zIndexMap[mapIndex],
+        transition: "all 0.5s ease",
+        position: "absolute",
+        left: "50%",
+        top: 0,
+        transformOrigin: "center",
+        transformStyle: "preserve-3d",
+      };
+    }
 
     return { display: "none" };
   };
@@ -87,14 +86,13 @@ const HairSection = () => {
     <Box
       sx={{
         backgroundColor: "#fff",
-        px: { xs: 2, sm: 10, md: 2, lg: 2 },
+        px: { xs: 2, sm: 10, md: 2, lg: 5 },
         mt: 5,
-        ml: { sm:2,xs: 2,lg:5},
+        ml: { sm:2,xs: -1},
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        
       }}
     >
       <Typography
@@ -102,13 +100,13 @@ const HairSection = () => {
         fontWeight="bold"
         fontFamily="Poppins"
         textAlign="center"
-        mb={{ xs: 5, sm: 6, md: 8, lg: 15 }}
-        mt={10}
+        mb={{ xs: 5, sm: 6, md: 8, lg: 10 }}
+        mt={5}
       >
         HAIR TREATMENT
       </Typography>
 
-      <Grid container spacing={35} alignItems="center">
+      <Grid container spacing={5} alignItems="center">
         {/* LEFT: Carousel */}
         <Grid
           item
@@ -118,8 +116,6 @@ const HairSection = () => {
           display="flex"
           justifyContent={{ xs: "center", md: "left" }}
           mt={{ xs: 5, sm: 5, md: 0 }}
-          
-          
         >
           <Box
             position="relative"
@@ -129,14 +125,13 @@ const HairSection = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            
           >
             {treatments.map((treatment, i) => (
               <Paper
                 key={i}
                 sx={{
-                 width: isMdDown ? 400 : 500,
-                  height: isMdDown ? 320 : 500,
+                 width: isMdDown ? 260 : 340,
+                  height: isMdDown ? 360 : 450,
                   borderRadius: 4,
                   overflow: "hidden",
                   position: "absolute",
@@ -153,7 +148,7 @@ const HairSection = () => {
                   alt={treatment.title}
                   sx={{
                     width: "100%",
-                    height: "70%",
+                    height: "50%",
                     objectFit: "cover",
                     objectPosition: "center",
                     display: "block",
@@ -182,7 +177,7 @@ const HairSection = () => {
           order={{ xs: 1, md: 2 }}
           display="flex"
           justifyContent="center"
-          sx={{ ml: { md: "820px",lg:100 } }}
+          sx={{ ml: { md: "200%" } }}
         >
           <Box
             display="flex"
@@ -192,6 +187,7 @@ const HairSection = () => {
             textAlign={{ xs: "center", md: "left" }}
             px={{ xs: 2, sm: 4, md: 1 }}
             height="100%"
+            
           >
             <Typography fontSize={{ sm: "1.2rem" }} color="text.secondary" mb={1}>
               Most Popular Hair Solutions in Dindigul
