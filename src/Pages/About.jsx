@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import FAQ from '../Components/About/FAQ'
 
 import Header from '../Components/Header'
@@ -9,6 +10,10 @@ import FAQSkin from '../Components/About/FAQSkin'
 function About() {
   return (
     <div>
+        <Helmet>
+          <title>About Us - GroHair & GloSkin</title>
+          <meta name="description" content="Learn more about GroHair & GloSkin, the leading hair and skin care clinic in Dindigul." />
+        </Helmet>
         <Header/>
         <Section/>
       <FAQ/>
